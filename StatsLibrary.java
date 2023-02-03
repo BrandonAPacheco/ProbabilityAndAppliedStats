@@ -51,4 +51,120 @@ public class StatsLibrary {
 	
 	
 	//method StandardDeviation
+	
+	
+	
+	public long Permutations(int n, int r) 
+	{
+		
+		if(r == 0) {
+			return 1;
+		}
+		
+		if(n - 1 == n - r) {
+			return n;
+		}
+		
+		if(n == 0 && r == 0) {
+			return 1;
+		}
+		
+		long result = 0;
+		int t = n - r;
+		
+		for(int i = n; i > 0; i--)
+		{
+			if(i == t) {
+				break;
+			}
+			else {
+				if(i == n) {
+					result = i * (i - 1);
+					i--;
+					if(i == t) {
+						break;
+					}
+				}
+				else {
+					result *= i;
+				}	
+			}
+			
+		}
+		return result;
+		
+	}
+	
+	public long Combinations(int n, int r)
+	{
+		if(r == 0) {
+			return 1;
+		}
+		if(n - 1 == n - r) {
+			return n;
+		}
+		
+		if(n == 0 && r == 0) {
+			return 1;
+		}
+		
+		long result = 0;
+		long denom = 0;
+		int t = n - r;
+		
+		for(int i = n; i > 0; i--)
+		{
+			if(i == t || i == r) {
+				if(i == t) {
+					t = 0;
+				}
+				else {
+					r = 0;
+				}
+				break;
+			}
+			else {
+				if(i == n) {
+					result = i * (i - 1);
+					i--;
+					if(i == t) {
+						break;
+					}
+				}
+				else {
+					result *= i;
+				}	
+			}
+			
+		}
+		if(r == 0) {
+			for(int i = t; i > 0; i--) {
+				if(i == t) {
+					denom = i * (i - 1);
+					i--;
+				}
+				else {
+					denom *= i;
+				}	
+			}
+			
+			result = result / denom;
+		}
+		else if(t == 0) {
+			for(int i = r; i > 0; i--) {
+				if(i == r) {
+					denom = i * (i - 1);
+					i--;
+				}
+				else {
+					denom *= i;
+				}	
+			}
+			
+			result = result / denom;
+		}
+		
+		return result;
+	}
+	
 }
