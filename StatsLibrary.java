@@ -29,20 +29,23 @@ public class StatsLibrary {
 	//software design, a b c programming? 
 	
 	//method to find median
-	public int findMedian(ArrayList<Integer> inputNum){
+	public double findMedian(ArrayList<Integer> inputNum){
 		//write a function if its in order?
-		
-		int halfSize = inputNum.size() / 2;
-		int result = inputNum.get(halfSize);
-		
-		
+		//pass it to a sorting method
+		//two branches if length is even or odd
+		//return median
+		double result = 0;
+                
 		return result;
 	}
 	
 	//method to find mode
 	public double findMode (ArrayList<Integer> inputNum) {
 		
-		
+		//write a function if its in order
+		//pass it to a sorting method
+		//two branches if length is even or odd
+		//return mode
 		
 		double result;
 		
@@ -51,7 +54,7 @@ public class StatsLibrary {
 	
 	
 	
-	//method StandardDeviation
+	//method StandardDeviation goes here
 	
 	
 	
@@ -180,7 +183,7 @@ public class StatsLibrary {
 		BigInteger result = BigInteger.ZERO;
 		for(int i = num; i > 0; i--) {
 			if (i == num) {
-        		BigInteger I = BigInteger.valueOf(i);			
+        			BigInteger I = BigInteger.valueOf(i);			
 				result = I.multiply(BigInteger.valueOf(i - 1));
 				i--;
 				continue;
@@ -191,4 +194,18 @@ public class StatsLibrary {
 		return result;
 		
 	}
+	
+	public void TestMean(){
+	    System.out.println("Testing the Mean method");
+	    ArrayList<Integer> list = new ArrayList<Integer>();
+	    //add a random list generator
+	    list.add(1);
+	    list.add(2);
+	    list.add(3);
+	    list.add(4);
+	    list.add(5);
+	    
+	    double result = findMean(list);
+	    System.out.println(result);
+        }
 }
