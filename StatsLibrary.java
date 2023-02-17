@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.math.BigInteger;
 /**
  * @author Brandon_Pacheco
  * @version Jan 26, 2023
@@ -167,4 +168,27 @@ public class StatsLibrary {
 		return result;
 	}
 	
+	public BigInteger Factorial(int num) {
+		if(num == 0) {
+			return BigInteger.ONE;
+		}
+		
+		if(num == 1) {
+			return BigInteger.ONE;
+		}
+		
+		BigInteger result = BigInteger.ZERO;
+		for(int i = num; i > 0; i--) {
+			if (i == num) {
+        		BigInteger I = BigInteger.valueOf(i);			
+				result = I.multiply(BigInteger.valueOf(i - 1));
+				i--;
+				continue;
+			}
+			result = result.multiply(BigInteger.valueOf(i));
+		}
+		
+		return result;
+		
+	}
 }
