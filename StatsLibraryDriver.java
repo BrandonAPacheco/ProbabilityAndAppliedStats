@@ -7,7 +7,7 @@ public class StatsLibraryDriver {
 		StatsLibrary stats = new StatsLibrary();
 		stats.testMean();
 		stats.testMedian();
-		
+		stats.testMode();
 		
 	}
 
