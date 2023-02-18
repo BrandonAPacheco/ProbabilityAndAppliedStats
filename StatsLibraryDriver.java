@@ -9,6 +9,7 @@ public class StatsLibraryDriver {
 		stats.testMedian();
 		stats.testMode();
 		
+		
 	}
 
 }

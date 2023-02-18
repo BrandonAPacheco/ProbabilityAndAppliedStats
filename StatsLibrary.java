@@ -330,7 +330,6 @@ public class StatsLibrary {
 	    try 
 	    {
 
-
 	    }catch(NullPointerException error) {
 	    	System.out.println("All elements appeared the same number of times");
 	    }
