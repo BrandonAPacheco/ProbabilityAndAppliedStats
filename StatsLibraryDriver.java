@@ -5,9 +5,9 @@ public class StatsLibraryDriver {
 		// TODO Auto-generated method stub
 		
 		StatsLibrary stats = new StatsLibrary();
-		System.out.println(stats.Permutations(7,6));
-		
-		System.out.println(stats.Combinations(7,3));
+		stats.testMean();
+		stats.testMedian();
+		stats.testMode();
 		
 	}
 

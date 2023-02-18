@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Random;
 import java.math.BigInteger;
 /**
  * @author Brandon_Pacheco
@@ -6,21 +7,61 @@ import java.math.BigInteger;
  *
  */
 public class StatsLibrary {
+	
+	public boolean isSorted(ArrayList<Integer> list) {
+		for(int i = 0; i < list.size() - 1; i++) {
+			if(list.get(i) > list.get(i + 1)) {
+				return false;
+			}
+		}
+		return true;
+	}
+	
+	public ArrayList<Integer> insertionSort(ArrayList<Integer> list){
+		for(int i = 1; i < list.size(); i++) {
+			int key = list.get(i);
+			int j = i - 1;
+			int k = list.get(j);
+			while(j >= 0 && list.get(j) > key){
+				int n = list.get(j);
+				list.set(j + 1, n);
+				j -= 1;
+			}
+			
+			list.set(j+1, key);
+		}
+		return list;
+	}
+	
+	public ArrayList<Integer> listRandomized(){
+		ArrayList<Integer> list = new ArrayList<>();
+		Random rand = new Random();
+		for(int i = 0; i < 9; i++) {
+			int value = rand.nextInt(100) + 1;
+			list.add(value);
+		}
+		
+		return list;
+	}
 
 	/**
 	 * @param inputNum 
 	 * @return result 
 	 */
-	public double findMean (ArrayList<Integer> inputNum) {
+	public double findMean (ArrayList<Integer> list) {
+		
+		if(!isSorted(list)) {
+			list = insertionSort(list);
+		}
 		
 		double sum = 0;
 		//foreach loop formally known as enhanced for loop
 		//foreach uses an iterator
-		for(int singleElements : inputNum) {
+		for(int singleElements : list) {
 			sum += singleElements;
 		}
 		
-		double result = sum / inputNum.size();
+		double result = sum / list.size();
 		
 		return result;
 	}
@@ -29,27 +70,77 @@ public class StatsLibrary {
 	//software design, a b c programming? 
 	
 	//method to find median
-	public double findMedian(ArrayList<Integer> inputNum){
-		//write a function if its in order?
-		//pass it to a sorting method
+	public double findMedian(ArrayList<Integer> list){
+
+		if(!isSorted(list)) {
+			list = insertionSort(list);
+		}
 		//two branches if length is even or odd
-		//return median
 		double result = 0;
+		
+		if(list.size() % 2 != 0) {
+			result = (double) list.get(list.size() / 2);
+		}
+		else {
+			double left = (double) list.get((list.size() / 2) - 1);
+			double right = (double) list.get(list.size() / 2);
+			result = (left + right) / 2;
+		}
+		
+	
                 
 		return result;
 	}
 	
-	//method to find mode
-	public double findMode (ArrayList<Integer> inputNum) {
+	//method to find mode STILL NEEDS WORK, GETTING WRONG ANSWERS
+	// list is [6, 10, 11, 36, 54, 77, 83, 87, 87] but its saying all nums appear the same times.
+	//it should be 87
+	public Integer findMode (ArrayList<Integer> list) {
 		
-		//write a function if its in order
-		//pass it to a sorting method
+		if(!isSorted(list)) {
+			list = insertionSort(list);
+		}
+		
+		int limit = 0;
+		if(list.size() % 2 == 0) {
+			limit = (list.size() / 2) + 1;
+		}
+		else {
+			limit = list.size() / 2;
+		}
 		//two branches if length is even or odd
-		//return mode
 		
-		double result;
+		int result = 0;
+		int highest = 0;
+		for(int i = 0; i < list.size(); i++) {
+			int count = 0;
+			int key = list.get(i);
+			count++;
+			for(int j = i + 1; j < list.size(); j++) {
+				if(list.get(j) == key) {
+					count++;
+				}
+				else {
+					i = j;
+					break;
+				}
+				
+			}
+			if(count > highest) {
+				highest = count;
+				result = key;
+				if(highest >= limit) {
+					break;
+				}
+			}
+			
+		}
 		
-		return result = 2 / 4;
+		if (highest == 1) {
+			return null;
+		}
+		
+		return result;
 	}
 	
 	
@@ -194,18 +285,56 @@ public class StatsLibrary {
 		return result;
 		
 	}
-	
-	public void TestMean(){
+//----------------------------------------------------Testing Methods-------------------------------------------------------
+//--------------------------------------------------------------------------------------------------------------------------
+	public void testMean() {
 	    System.out.println("Testing the Mean method");
-	    ArrayList<Integer> list = new ArrayList<Integer>();
-	    //add a random list generator
-	    list.add(1);
-	    list.add(2);
-	    list.add(3);
-	    list.add(4);
-	    list.add(5);
-	    
+	    ArrayList<Integer> list = listRandomized();
 	    double result = findMean(list);
+	    System.out.println(list);
 	    System.out.println(result);
-        }
+
+    }
+	
+	public void testSort() {
+		
+		ArrayList<Integer> list = listRandomized();
+		System.out.println(list);
+		list = insertionSort(list);
+		System.out.println(list);
+		
+		
+	}
+	
+	public void testMedian() {
+	    System.out.println("Testing the Median method");
+	    ArrayList<Integer> list = listRandomized();
+	    double result = findMedian(list);
+	    System.out.println(list);
+	    System.out.println(result);
+
+    }
+	
+	public void testMode() {
+	    System.out.println("\nTesting the Mode method");
+	    ArrayList<Integer> list = listRandomized();
+	    Integer result = findMode(list);
+	    System.out.println(list);
+	    if(result == null) {
+	    	System.out.println("All elements appeared the same number of times");
+	    }
+	    else {
+	    	System.out.println(result);
+	    }
+/* delete this
+	    try 
+	    {
+
+   
+	    }catch(NullPointerException error) {
+	    	System.out.println("All elements appeared the same number of times");
+	    }
+*/
+
+	}
 }
