@@ -8,8 +8,6 @@ public class StatsLibraryDriver {
 		stats.testMean();
 		stats.testMedian();
 		stats.testMode();
-		
-		
 	}
 
 }
