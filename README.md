@@ -14,6 +14,6 @@ The Program_Birthday folder contain the java files that make up the Birthday pro
 
 The documentation for Birthday is available in the Docs_Birthday folder in pdf format.
 
-The histogram and binomial & geometric excel files are avaiable in the histogram folder in csv format.
+The histogram and binomial & geometric excel files are avaiable in the CSV_Folder directory in csv format.
 
-Formula sheet for the first half of the semester is in the Formula folder and its avaiable in word and pdf format.
+Formula sheet for the first half of the semester is in the Formula directory and its avaiable in word and pdf format.
