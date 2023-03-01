@@ -2,7 +2,7 @@
 -----------------------------------------------------------------------GitHub Practice----------------------------------------------------------------------
 The HelloWorldGitHub.java is the testing of someone else (cody) editing my code.
 
------------------------------------------------------------------------ Java Programs ----------------------------------------------------------------------
+----------------------------------------------------------------------- Java Programs ---------------------------------------------------------------------
 
 The Program_StatsLibrary folder contains the java files that make up the StatsLibrary.
 
@@ -10,7 +10,7 @@ The Program_DoorGame folder contains the java files that make up the door game p
 
 The Program_Birthday folder contain the java files that make up the Birthday program. (birthday paradox)
 
-------------------------------------------------------------------------Documentations----------------------------------------------------------------------
+------------------------------------------------------------------------Documentations-------------------------------------------------------------------
 
 Docs_Screenshots contain pdf files that have screenshots of my programs running.
 
@@ -20,7 +20,7 @@ The documentation for DoorGame is available in the Docs_DoorGame folder in pdf f
 
 The documentation for Birthday is available in the Docs_Birthday folder in pdf format.
 
-------------------------------------------------------------------------Miscellaneous-----------------------------------------------------------------------
+------------------------------------------------------------------------Miscellaneous----------------------------------------------------------------------
 
 The histogram from the beginning of the semester as well as the binomial & geometric class activity from Feb. 23, are available in the CSV_Folder directory in CSV format.
 
