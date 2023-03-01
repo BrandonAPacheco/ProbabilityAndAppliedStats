@@ -1,6 +1,8 @@
 # ProbabilityAndAppliedStats
 The HelloWorldGitHub.java is the testing of someone else editing my code.
 
+Docs_Screenshots contain pdf files that have screenshots of my programs running.
+
 The Program_StatsLibrary folder contains the java files that make up the StatsLibrary.
 
 The documentation for StatsLibrary is available in the Docs_StatsLibrary in pdf format. 
