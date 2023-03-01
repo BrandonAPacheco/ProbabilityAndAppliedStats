@@ -591,18 +591,18 @@ public class StatsLibrary {
 	 * This method tests all of testing methods that test the stats library class.
 	 */
 	public void testStatsLibrary() {
-//		testMean();
-//		testMedian();
-//		testMode();
-//		testStandardDeviation();
-//		testUnion();
-//		testIntersection();
-//		testComplement();
-//		testFactorial();
-//		testPermutations();
-//		testCombinations();
+		testMean();
+		testMedian();
+		testMode();
+		testStandardDeviation();
+		testUnion();
+		testIntersection();
+		testComplement();
+		testFactorial();
+		testPermutations();
+		testCombinations();
 		testBinomialDistribution();
-//		testGeometricDistribution();
+		testGeometricDistribution();
 	}
 	
 	/**
