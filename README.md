@@ -1,4 +1,6 @@
 # ProbabilityAndAppliedStats
+The HelloWorldGitHub.java is the testing of someone else editing my code.
+
 The stats library program consists of two java files: StatsLibrary.java and StatsLibraryDriver.java 
 The stats library also has two documentations: StatsLibrary.html and StatsLibraryDriver.html
 
