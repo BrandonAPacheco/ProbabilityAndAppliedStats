@@ -25,4 +25,4 @@ The documentation for Birthday is available in the Docs_Birthday folder in pdf f
 
 The histogram from the beginning of the semester as well as the binomial & geometric class activity from Feb. 23, are available in the CSV_Folder directory in CSV format.
 
-Formula sheet for the first half of the semester is in the Formula directory and its avaiable in word and pdf format.
+Formula sheet for the first half of the semester is in the Formula directory and its available in word and pdf format.
