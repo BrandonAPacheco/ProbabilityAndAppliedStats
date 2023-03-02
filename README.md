@@ -15,7 +15,7 @@ The Program_Birthday folder contain the java files that make up the Birthday pro
 
 Docs_Screenshots contain pdf files that have screenshots of my programs running.
 
-The documentation for StatsLibrary is available in the Docs_StatsLibrary in pdf format. 
+The documentation for StatsLibrary is available in the Docs_StatsLibrary folder in pdf format. 
 
 The documentation for DoorGame is available in the Docs_DoorGame folder in pdf format.
 
