@@ -26,3 +26,5 @@ The documentation for Birthday is available in the Docs_Birthday folder in pdf f
 The histogram from the beginning of the semester as well as the binomial & geometric class activity from Feb. 23, are available in the ExcelFolder
 
 Formula sheet for the first half of the semester is in the Formula directory and its available in word, and pdf format.
+
+The essay for project 1 is in the ProjectEssay folder available in pdf format.
