@@ -1,5 +1,6 @@
 # ProbabilityAndAppliedStats
 NOTE: The many "Delete file" were empty files in the directories (existed because of me making new directories).
+
 -------------------------------------------------GitHub Practice-----------------------------
 
 The HelloWorldGitHub.java is the testing of someone else (cody) editing my code.
