@@ -27,4 +27,4 @@ The histogram from the beginning of the semester as well as the binomial & geome
 
 Formula sheet for the first half of the semester is in the Formula directory and its available in word, and pdf format.
 
-The essay for project 1 is in the ProjectEssay folder available in pdf format.
+The essay for project 1 is in the ProjectEssay folder available in pdf, and word format.
